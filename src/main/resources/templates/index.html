@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments :: headerfiles">
+    <script src="funciones.js"></script>
+</head>
+<body >
+<header th:insert="fragments :: nav"></header>
+
+    <div class="container d-flex justify-content-center align-items-center ">
+        <div class="row  py-5 d-flex-column justify-content-center align-items-center  mb-5">
+            <div class="col-auto" th:insert="fragments :: creacion-dispositivo"></div>
+            <div class="col-m-8" th:insert="fragments :: alumno"></div>
+            <div class="col-m-8" th:insert="fragments :: tabla-dispositivos(alumno=${alumnoID})"  ></div>
+        </div>
+
+    </div>
+
+<footer th:insert="fragments :: footer"></footer>
+<div th:insert="fragments :: scripts"></div>
+
+<!--<div th:insert="fragments :: scriptTabla"></div>-->
+</body>
+</html>

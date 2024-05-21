@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:insert="fragments :: headerfiles">
+<body>
+<header th:insert="fragments :: nav"></header>
+<div class="container   d-flex justify-content-center align-items-center  ">
+    <div class="row  py-5 d-flex-column justify-content-center align-items-center  ">
+
+        <div class="col-m-8" th:insert="fragments :: alumno2"></div>
+        <div class="col-m-8" th:insert="fragments :: consulta-alumno(alumno=${alumnoID})"></div>
+    </div>
+
+</div>
+
+<div th:insert="fragments :: footer"></div>
+<div th:insert="fragments :: scripts"></div>
+</body>
+</html>
