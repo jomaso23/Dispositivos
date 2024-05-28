@@ -37,14 +37,12 @@
                             <li><hr class="dropdown-divider"></li>
 
                             <!--                  !!!! pendiente de modificar-->
-                            <li><a class="dropdown-item" href="#">Acerca de</a></li>
-                            <li><a class="dropdown-item" href="#">Explicacion del Proyecto</a></li>
-                            <li><a class="dropdown-item" href="#">Contacto</a></li>
+
+                            <li><a class="dropdown-item" href="/explicacion">Explicacion del Proyecto</a></li>
+
                         </ul>
                     </li>
-<!--                    <li class="nav-item">-->
-<!--                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>-->
-<!--                    </li>-->
+
                 </ul>
 <!--                AQUI TENGO QUE REEMPLAZARLO POR UN BOTON DE LOGOUT-->
                 <form class="d-flex" role="search">
@@ -363,42 +361,94 @@
     </div>
 
 
+
 </div>
 
 <!--+++++++++++++++++++++++++++++++++++++++++++++++++-->
 
 
+<div th:fragment="explicacion-proyecto" class=" p-3 border rounded shadow-sm text-start mb-5">
+    <div class="">
+        <div>
+            <h5 >REGISTRO DE DISPOSITIVOS</h5>
+            <p>En este proyecto se pretende poner en practica los aspectos basicos
+                de una aplicacion basada en JAVA implementando su principal FrameWork, SPRING y otros como HIBERNATE,
+                librerias mas comunes y utiles a esto fines como fue Lombok para a creacion de codigo mas limpio y legible,
+                tambien se uso SWAGGER para documentar los endpoints del proyecto y hacer mas facil su uso por otros desarrolaldores,
+                para la persistencia de datos se uso base de datos relacional MySQL, ademas
+                de otras tecnologias para la implemetacion del frontEnd como fue el motor de plantillas THYMELEAF </p>
+        </div>
+        <div class="p-3">
+            <h5 >GUIA DE USO:</h5>
+            <ul>
+                <li>una vez en el landing puedes dirigirte al NAV y alli en opciones, tienes:
+                    ASIGANCION Y CREACION, CONSULTA, EXPLICACION DEL PROYECTO.
+                </li>
+                <br>
+                <li>ASIGNACION:  en este apartado tienes que buscar un USUARIO por ID
+                , estos seran digitos del 1 al 10, una vez seleccionado un usuario, se desplegara una
+                lista de DISPOSITIVOS disponibles en el dia, que no se han asignado a nadie,
+                puedes asignarle uno o varios dispositivos a un usuario, estas operaciones se finalizan siempre
+                con el boton ENVIAR, disponible en cada formulario.</li>
+                <br>
+                <li>CREACION: por otro lado tambien puedes crear un dispositivo electronico o de otro tipo
+                siempre que se cumpla con los campos ahi mencionado.</li>
+                <br>
+                <li>CONSULTA: en esta seccion puedes consultar el historico de elementos tiene asignado el usuario
+                en ese dia, este se consulta ingresando el ID del USUARIO.</li>
+            </ul>
+        </div>
 
-
-
+    </div>
+</div>
 
 <!--footer general de las paginas-->
 <footer th:fragment="footer" class="footer bd-footer   mt-5 dark bg-dark text-center w-100  position-relative bottom-0">
     <div class="container text-body-secondary py-3">
         <div class="row ">
-            <div class="col d-flex  justify-content align-items-center">
-                <p class="text-secondary">Registro Dispositivos</p>
-            </div>
-            <div class="col">
-                <h5 class="text-secondary">INFORMACION</h5>
-                <ul class="">
-                    <li><a href="">Acerca de </a></li>
-                    <li><a href="">Explicacion del Proyecto </a></li>
-                    <li><a href="/contacto">Contacto</a></li>
+            <div class="col-3">
+                <h5 class="text-secondary">TECNOLOGIAS USADAS</h5>
+                <ul class="list-unstyled">
+                    <li class="text-secondary">Java</li>
+                    <li class="text-secondary">MySQL</li>
+                    <li class="text-secondary">Thymeleaf</li>
+                    <li class="text-secondary">Swagger</li>
+                    <li class="text-secondary">HTML,Css,Bootstrap</li>
+
+
                 </ul>
+
             </div>
-            <div class="col">
+            <div class="col-3">
                 <h5 class="text-secondary">LINKS</h5>
                 <ul >
                     <li><a target="_blank" href="https://github.com/jomaso23/Dispositivos">GitHub</a></li>
                     <li><a target="_blank" href="https://www.linkedin.com/in/joan-soto-51727b252/">Linkedin</a></li>
                 </ul>
             </div>
+            <div class=" col-3 d-flex-column  justify-content align-items-center">
+                <h5 class="text-secondary">Navegacion</h5>
+                <ul class="list-unstyled">
+                    <li><a href="">inicio</a></li>
+                    <li><a href="">asginacion y creacion de dispositivos</a></li>
+                    <li><a href="">consulta de dipositivos asignados</a></li>
+                    <li><a href="">explicacion del proyecto</a></li>
+                </ul>
+            </div>
+            <div class=" col-3 d-flex-column  justify-content align-items-center">
+                <h5 class="text-secondary">MANUEL SOTO-Desarrollador java</h5>
+
+                <p class="text-secondary">Registro Dispositivos</p>
+            </div>
+
+
+
         </div>
     </div>
 </footer>
 <div th:fragment ="estilos">
     <style>
+
         ul, li, h5{
     text-align: left;
     padding:0;
@@ -429,22 +479,3 @@
 </body>
 
 </html>
-<!--INSERT INTO Dispositivos (tipo, marca,serial, date_created, last_updated)-->
-<!--VALUES-->
-<!--('laptop','acer','3215asdg',CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),-->
-<!--('pc','toshiba','98794saher', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),-->
-<!--('laptop','VENTO','654512dfba', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);-->
-
-
-<!--INSERT INTO Users (name, apellido, documento, user_name, password_hash, date_created, last_updated)-->
-<!--VALUES-->
-<!--('Nombre1', 'Apellido1', 'Documento1', 'UserName1', 'PasswordHash1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),-->
-<!--('Nombre2', 'Apellido2', 'Documento2', 'UserName2', 'PasswordHash2', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),-->
-<!--('Nombre3', 'Apellido3', 'Documento3', 'UserName3', 'PasswordHash3', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),-->
-<!--('Nombre4', 'Apellido4', 'Documento4', 'UserName4', 'PasswordHash4', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),-->
-<!--('Nombre5', 'Apellido5', 'Documento5', 'UserName5', 'PasswordHash5', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),-->
-<!--('Nombre6', 'Apellido6', 'Documento6', 'UserName6', 'PasswordHash6', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),-->
-<!--('Nombre7', 'Apellido7', 'Documento7', 'UserName7', 'PasswordHash7', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),-->
-<!--('Nombre8', 'Apellido8', 'Documento8', 'UserName8', 'PasswordHash8', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),-->
-<!--('Nombre9', 'Apellido9', 'Documento9', 'UserName9', 'PasswordHash9', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),-->
-<!--('Nombre10', 'Apellido10', 'Documento10', 'UserName10', 'PasswordHash10', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);-->

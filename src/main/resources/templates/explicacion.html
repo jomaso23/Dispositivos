@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:insert="fragments :: headerfiles">
+
+</head>
+<body >
+<div th:insert="fragments :: estilos"></div>
+<header th:insert="fragments :: nav"></header>
+
+<div class="container d-flex justify-content-center align-items-center ">
+    <div class="row  py-5 d-flex-column justify-content-center align-items-center  mb-5">
+
+
+        <div class=" col-sm-8 mt-5 " th:insert="fragments :: explicacion-proyecto"></div>
+
+    </div>
+
+</div>
+
+<footer th:insert="fragments :: footer"></footer>
+<div th:insert="fragments :: scripts"></div>
+</body>
+</html>

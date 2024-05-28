@@ -37,5 +37,9 @@ public class HomeController {
         
         return "consultaAlumno";
     }
+    @GetMapping("/explicacion")
+    public String explicacion(Model model){
+        return "explicacion";
+    }
 
 }

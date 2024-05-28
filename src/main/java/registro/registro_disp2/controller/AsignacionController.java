@@ -42,7 +42,7 @@ public class AsignacionController {
 	}
 //	+++++++++++++++++++++++++++++++++++++++++++++++
 
-//	anteriormente la url era getAlumno
+
 	@PostMapping("/getAlumno")
 	public String getAlumno(@RequestParam(value = "id", required = false)String id, Model model){
 	
